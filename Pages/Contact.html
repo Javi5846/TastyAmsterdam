@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keyword" content="food, asmterdam, tasty, cook, chef, flavour, cooking, recipes, comida, recetas, video, contact, contacto, location, address, phone number, ubicacion, telefono">
+    <meta name="description" content="Tasty food in Amsterdam, the best variety of dishes in the city, online ordering, food from different countries.">
+    <title>Tasty Amsterdam</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <!--Nav Menu-->
+        <div class="row header">
+            <div class="col-lg-1 col-md-1 col-xs-12">
+                <div class="tasty-logo">
+                  <a href="../Pages/menu.html"><img src="../assets/img/LogoMakr-6wFna6.png" alt="brand logo"></a> 
+                </div>
+            </div>
+            <div class="col-lg-11 col-md-11 col-xs-12">
+              <nav class="navbar navbar-expand-lg navbar-light bg-propio">
+                <h1 class="navbar-brand h1desktop h1mobile bold">Tasty Amsterdam | </h1>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item active">
+                        <a class="nav-link bold" href="#">Contact <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link bold" href="../Pages/AboutUs.html">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link bold" href="../Pages/Shop.html">Shop</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link bold" href="../Pages/Faq.html">F.A.Q</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+          </div> 
+        <div class="col-lg-12 col-md-12 col-xs-12 contact--section">
+            <h1 class="contact--section--h1 purple bold">CONTACT</h1>   
+        </div>
+        <div class="container">
+          <div class="row contact--details">
+              <div class="col-lg-12 col-xs-12">
+                  <p class="contact--details-address"> Nova Zemblastraat 182, 1014 RJ Amsterdam</p>
+                  <iframe class="contact--details-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4869.848085268178!2d4.8769497783247!3d52.38992726915928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6082ce57b8a65%3A0xaae64bbc008c077c!2s1013%20RJ%20%C3%81msterdam!5e0!3m2!1ses!2snl!4v1616839627696!5m2!1ses!2snl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  <p class="contact--details-number">Phone: +31 6388 71424</p>
+              </div> 
+          </div>
+      </div>
+      <div class="row faq--form">
+        <div class="col-lg-5 col-xs-12">
+            <h2 class="faq--form--title bold">Do you have another question ?</h2>
+            <h2 class="faq--form--title--2 bold">Contact Us</h2>
+        </div>
+        <div class="col-lg-7 col-xs-12 faq--form--question">
+            <form method="post" action="" onsubmit="return checkform(this);">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Your Email address</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Your Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name and surname">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Phone Number</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Phone Number">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Questions/Comments</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Your questions/comments here..."></textarea>
+                </div>
+                <div class="row faq--captcha--send">
+                <!-- START CAPTCHA -->
+                    <br>
+                    <div class="capbox">
+                    
+                    <div id="CaptchaDiv"></div>
+                    
+                    <div class="capbox-inner">
+                    Type the number:<br>
+                    
+                    <input type="hidden" id="txtCaptcha">
+                    <input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+                    
+                    </div>
+                    </div>
+                    <br><br>
+                <!-- END CAPTCHA -->
+                <a href="#" class="btn btn-primary btn-lg active faq--captcha--send--button" role="button" aria-pressed="true">Send</a>
+                </div>
+            </form>
+            <script type="text/javascript">
+
+                // Captcha Script
+                
+                function checkform(theform){
+                var why = "";
+                
+                if(theform.CaptchaInput.value == ""){
+                why += "- Please Enter CAPTCHA Code.\n";
+                }
+                if(theform.CaptchaInput.value != ""){
+                if(ValidCaptcha(theform.CaptchaInput.value) == false){
+                why += "- The CAPTCHA Code Does Not Match.\n";
+                }
+                }
+                if(why != ""){
+                alert(why);
+                return false;
+                }
+                }
+                
+                var a = Math.ceil(Math.random() * 9)+ '';
+                var b = Math.ceil(Math.random() * 9)+ '';
+                var c = Math.ceil(Math.random() * 9)+ '';
+                var d = Math.ceil(Math.random() * 9)+ '';
+                var e = Math.ceil(Math.random() * 9)+ '';
+                
+                var code = a + b + c + d + e;
+                document.getElementById("txtCaptcha").value = code;
+                document.getElementById("CaptchaDiv").innerHTML = code;
+                
+                // Validate input against the generated number
+                function ValidCaptcha(){
+                var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+                var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+                if (str1 == str2){
+                return true;
+                }else{
+                return false;
+                }
+                }
+                
+                // Remove the spaces from the entered and generated code
+                function removeSpaces(string){
+                return string.split(' ').join('');
+                }
+            </script>
+        </div>
+       <div class="faq--form--captcha">
+       </div>
+        
+      </div>
+      <footer class="container">
+        <div class="row footer">
+            <div class="col-lg-12 col-xs-12 footer--pages--back">
+              <a class="footer--pages-back-to-menu bold" href="../Pages/menu.html">Back To Menu</a>
+            </div>
+            <div class="col-lg-4 col-xs-12 footer--pages">  
+              <a href="../Pages/menu.html"><img class="brand--logo"src="../assets/img/LogoMakr-6wFna6.png" alt="brand logo"></a>
+            </div>
+            <div class="col-lg-4 col-xs-12 footer--pages">
+              <h3 class="footer--pages--copyright">Copyright® Tasty Amsterdam 2021</h3>
+            </div>
+            <div class="col-lg-4 col-xs-12 footer--pages"> 
+              <h3 class="footer--pages--followus">Follow us</h3>
+              <a href="http://facebook.com" target="_blank"><img class="footer--pages--redes" src="../assets/img/LogoMakr-3IkjL8.png" alt="redes"></a>
+              <a href="http://instagram.com" target="_blank"><img class="footer--pages--redes"src="../assets/img/LogoMakr-7J1vfJ.png" alt="redes"></a> 
+            </div>
+            <div class="col-lg-12 col-xs-12 footer--pages">
+              <h3 class="footer--pages--webdeveloper">Web Design by <b><a href="https://www.linkedin.com/in/javier-de-martino-4222a91ba/" class="webdeisgn--name">Javier De Martino</a></b></h3>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
