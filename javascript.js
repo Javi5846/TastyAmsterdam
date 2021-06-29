@@ -1,1 +1,1 @@
-prompt("En breve se habilitara el carrito de compras !!! ")
+let saludo = prompt("En breve se habilitara el carrito de compras !!! ")
