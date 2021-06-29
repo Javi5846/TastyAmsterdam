@@ -25,7 +25,6 @@ class Comidas {
   }
   if (preguntaInicial == "asiatica") {
     console.log(dishes[2],dishes[3]);
-    console.log("Tambien disponemos de los siguentes platos españoles:" + (espaniola.toString()));
   
     let preguntaPago = prompt ("Desea pagar en efectivo?").toLowerCase();
   while (preguntaPago == "" || (preguntaPago != "si" && preguntaPago!= "no")) {
@@ -45,7 +44,6 @@ class Comidas {
   }
   else if (preguntaInicial == "española") {
     console.log(dishes[0],dishes[1]);
-    console.log("Tambien disponemos de los siguentes platos asiaticos :" + asiatica);
     let preguntaPago = prompt ("Desea pagar en efectivo?").toLowerCase();
     while (preguntaPago == "" || (preguntaPago != "si" && preguntaPago!= "no")) {
       alert("Responda Si o No");
