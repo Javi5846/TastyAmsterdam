@@ -17,7 +17,7 @@ class Comidas {
   dishes.push(new Comidas(3,"Red Tuna Tataki", "13", "asiatica"));
   dishes.push(new Comidas(4,"Red Tuna Tartar","14", "asiatica"));
   
-  //No entiendo porque lineas 21 y 22 tira object Object, cuando mando por console.log lineas 33 y 53 :(
+  //No entiendo porque lineas 22 y 23 tira object Object, cuando mando por console.log lineas 34 y 54 :( 
   
   const asiatica = (dishes.filter(elemento => elemento.variedad.includes("asiatica")));
   const espaniola = (dishes.filter(elemento => elemento.variedad.includes("española")));
