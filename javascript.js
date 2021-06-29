@@ -23,7 +23,7 @@ class Comidas {
   const espaniola = (dishes.filter(elemento => elemento.variedad.includes("española")));
   
   
-  let preguntaInicial = prompt("Bienvenidos, seleccione el tipo de comida para conocer las opciones, por el momento estamos a prueba con: Asiatica o Española").toLowerCase();
+  let preguntaInicial = prompt("Bienvenidos, estamos trabajando para habilitar la seccion, seleccione un tipo de comida para conocer las opciones que vamos a ofrecer, por el momento estamos a prueba con: Asiatica o Española").toLowerCase();
   
   while (preguntaInicial == "" || (preguntaInicial != "asiatica" && preguntaInicial != "española")) {
     alert("Por favor ingrese una de las opciones.");
