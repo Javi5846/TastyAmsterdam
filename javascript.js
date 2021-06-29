@@ -72,5 +72,5 @@ class Comidas {
 
 
   function avisoDeJs() {
-    alert("En breve se habilitara el carrito de compras !!!");
+    alert("Ups !! En breve se habilitara el carrito de compras !!!");
 }
