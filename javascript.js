@@ -1,10 +1,4 @@
-let saludo = prompt("En breve se habilitara el carrito de compras !!! ")
 
-//boton dinamico
-function avisoDeJs() {
-    alert("En breve se habilitara el carrito de compras !!!");
-}
-/*
 class Comidas {
     constructor(id,plato, precio, variedad) {
         this.id = id;
@@ -74,4 +68,9 @@ class Comidas {
     }
   }
   
-  alert("Gracias por elegirnos !!!")*/
+  alert("Gracias por elegirnos, aqui los platos que se vienen !!!");
+
+
+  function avisoDeJs() {
+    alert("En breve se habilitara el carrito de compras !!!");
+}
