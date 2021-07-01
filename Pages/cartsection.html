@@ -31,11 +31,11 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                       <ul class="navbar-nav">
-                        <li class="nav-item active">
-                          <a class="nav-link bold" href="#">Shop <span class="sr-only">(current)</span></a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link bold" href="../Pages/AboutUs.html">About Us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link bold" href="../Pages/Shop.html">Shop</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link bold" href="../Pages/Faq.html">F.A.Q</a>
@@ -43,8 +43,8 @@
                         <li class="nav-item">
                           <a class="nav-link bold" href="../Pages/Contact.html">Contact</a>
                         </li>
-                        <li class="nav-item">
-                          <a href="/Pages/cartsection.html"><img class="logo--carrito--menu" src="/assets/img/cartlogo.png" alt="cart-logo"></a>
+                        <li class="nav-item active">
+                            <a href="/Pages/cartsection.html"><img class="logo--carrito--menu" src="/assets/img/cartlogo.png" alt="cart-logo"><span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
@@ -53,70 +53,15 @@
                     </div>
                   </nav>
             </div> 
-     <div class="container">
+    <div class="container">
           <div class="row">
               <div class="col-lg-12 shop">
-                  <h1 class="shop--h1 bold">SHOP</h1>
+                  <h1 class="shop--h1 bold">CHECKOUT</h1>
               </div>
           </div>
-        </div>
-    <!--Section Shop-->
-    <div class="row section1">
-        <div class="col-lg-4 col-md-6 col-xs-12 section1--food" data-aos="flip-left">
-            <img  class="section1--food--img" src="../assets/img/20201108_191734.jpg" alt="red tuna tataki">
-            <h3 class="section1--food-description bold">Red Tuna Tataki</h3>
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input onclick="avisoDeJs()" type="checkbox" checked> Add to cart
-                </label>
-              </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12 section1--food" data-aos="flip-left">
-            <img class="food" src="../assets/img/20201218_144955.jpg" alt="cheese cake">
-            <h3 class="section1--food-description bold">Cheese Cake</h3>
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input onclick="avisoDeJs()" type="checkbox" checked> Add to cart
-                </label>
-              </div>
-        </div>
-        <div class="col-lg-4 col-md-12 col-xs-12 section1--food" data-aos="flip-left">
-            <img class="food" src="../assets/img/20210224_123118.jpg" alt="banana loaf cake">
-            <h3 class="section1--food-description bold">Banana Loaf Cake with DDL</h3>
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input onclick="avisoDeJs()" type="checkbox" checked> Add to cart
-                </label>
-              </div>
-        </div>
     </div>
-    <div class="row section2">
-        <div class="col-lg-4 col-md-6 col-xs-12 section2--food" data-aos="flip-right">
-            <img class="section2--food--img"src="../assets/img/20210429_134225.jpg" alt="black rice">
-            <h3 class="section2--food-description bold">Black Rice</h3>
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input onclick="avisoDeJs()" type="checkbox" checked> Add to cart
-                </label>
-              </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12 food section2--food" data-aos="flip-right">
-            <img class="section2--food--img" src="../assets/img/20210429_134414.jpg" alt="red tuna tartar">
-            <h3 class="section2--food-description bold">Red Tuna Tartar</h3>
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input onclick="avisoDeJs()" type="checkbox" checked> Add to cart
-                </label>
-              </div>
-        </div>
-        <div class="col-lg-4 col-md-12 col-xs-12 food section2--food" data-aos="flip-right">
-            <img class="section2--food--img" src="../assets/img/sushi1.jpg" alt="sushi">
-            <h3 class="section2--food-description bold">Sushi</h3>
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input onclick="avisoDeJs()" type="checkbox" checked> Add to cart
-                </label>
-              </div>
+    <div class="col-lg-12">
+        <div id="container--cart">
         </div>
     </div>
     <footer class="container">
@@ -146,6 +91,6 @@
     <script>
       AOS.init();
     </script>
-    <script src="../javascriptshop.js"></script>
+    <script src="../javascriptcart.js"></script>
 </body>
 </html>

@@ -217,6 +217,12 @@ body {
 .faq--captcha--send--button {
   margin-left: 80px; }
 
+/*Cart Section Desktop*/
+.logo--carrito--menu {
+  width: 30px;
+  margin-top: 22px;
+  margin-left: 25px; }
+
 /* COMPACT CAPTCHA */
 .capbox {
   background-color: #BBBBBB;
