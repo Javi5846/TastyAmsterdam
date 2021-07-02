@@ -1,4 +1,4 @@
-
+/*
 let preguntaComida = prompt ("Que plato de la sección Shop le gustaria pedir?")
 
 
@@ -8,6 +8,6 @@ contenedor.innerHTML = `<h3>Ha elejido ${preguntaComida}</h3>
                         <p>  Producto:</p>
                         <b> € </b>`;
 document.getElementById("container--cart").appendChild(contenedor);
-
+*/
 
 
