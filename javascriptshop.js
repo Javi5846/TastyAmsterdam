@@ -4,37 +4,37 @@ const listaDeProductos = [
       id: 1,
       plato: 'Red Tuna Tartar',
       precio: 11,
-      imagen: 'assets/img/20210429_134414.jpg'
+      imagen: '../assets/img/20210429_134414.jpg'
   },
   {
       id: 2,
       plato: 'Red Tuna Tataki',
       precio: 12,
-      imagen: 'assets/img/20201108_191734.jpg'
+      imagen: '../assets/img/20201108_191734.jpg'
   },
   {
       id: 3,
       plato: 'Cheese Cake (slice)',
       precio: 5.5,
-      imagen: 'assets/img/20201218_144955.jpg'
+      imagen: '../assets/img/20201218_144955.jpg'
   },
   {
       id: 4,
       plato: 'Banana & DDL Loaf Cake (800 gr aprox)',
       precio: 8,
-      imagen: 'assets/img/20210224_123118.jpg'
+      imagen: '../assets/img/20210224_123118.jpg'
   },
   {
       id: 5,
       plato: 'Black Rice (Cuttlefish ink)',
       precio: 7.5,
-      imagen: 'assets/img/20210429_134225.jpg'
+      imagen: '../assets/img/20210429_134225.jpg'
   },
   {
       id: 6,
       plato: 'Sushi (12 rolls, can be mixed with nigiri.)',
       precio: 18,
-      imagen: 'assets/img/sushi1.jpg'
+      imagen: '../assets/img/sushi1.jpg'
   }
 
 ];

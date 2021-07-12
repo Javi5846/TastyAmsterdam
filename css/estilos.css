@@ -157,6 +157,15 @@ body {
   margin-bottom: 20px;
   margin-top: 20px; }
 
+.list-group-item {
+  background: transparent !important; }
+
+.card {
+  background: transparent !important; }
+
+.text-right {
+  text-align: center !important; }
+
 /*FAQ Desktop*/
 .faq--section--h1 {
   margin-top: 40px;
