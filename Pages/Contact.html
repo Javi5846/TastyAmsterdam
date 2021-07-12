@@ -70,94 +70,12 @@
             <h2 class="faq--form--title--2 bold">Contact Us</h2>
         </div>
         <div class="col-lg-7 col-xs-12 faq--form--question">
-            <form method="post" action="" onsubmit="return checkform(this);">
-                <div class="form-group">
-                  <label for="exampleFormControlInput1">Your Email address</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Your Name</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name and surname">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlInput1">Phone Number</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Phone Number">
-                  </div>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Questions/Comments</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Your questions/comments here..."></textarea>
-                </div>
-                <div class="row faq--captcha--send">
-                <!-- START CAPTCHA -->
-                    <br>
-                    <div class="capbox">
-                    
-                    <div id="CaptchaDiv"></div>
-                    
-                    <div class="capbox-inner">
-                    Type the number:<br>
-                    
-                    <input type="hidden" id="txtCaptcha">
-                    <input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
-                    
-                    </div>
-                    </div>
-                    <br><br>
-                <!-- END CAPTCHA -->
-                <a href="#" class="btn btn-primary btn-lg active faq--captcha--send--button" role="button" aria-pressed="true">Send</a>
-                </div>
-            </form>
-            <script type="text/javascript">
-
-                // Captcha Script
-                
-                function checkform(theform){
-                var why = "";
-                
-                if(theform.CaptchaInput.value == ""){
-                why += "- Please Enter CAPTCHA Code.\n";
-                }
-                if(theform.CaptchaInput.value != ""){
-                if(ValidCaptcha(theform.CaptchaInput.value) == false){
-                why += "- The CAPTCHA Code Does Not Match.\n";
-                }
-                }
-                if(why != ""){
-                alert(why);
-                return false;
-                }
-                }
-                
-                var a = Math.ceil(Math.random() * 9)+ '';
-                var b = Math.ceil(Math.random() * 9)+ '';
-                var c = Math.ceil(Math.random() * 9)+ '';
-                var d = Math.ceil(Math.random() * 9)+ '';
-                var e = Math.ceil(Math.random() * 9)+ '';
-                
-                var code = a + b + c + d + e;
-                document.getElementById("txtCaptcha").value = code;
-                document.getElementById("CaptchaDiv").innerHTML = code;
-                
-                // Validate input against the generated number
-                function ValidCaptcha(){
-                var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
-                var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
-                if (str1 == str2){
-                return true;
-                }else{
-                return false;
-                }
-                }
-                
-                // Remove the spaces from the entered and generated code
-                function removeSpaces(string){
-                return string.split(' ').join('');
-                }
-            </script>
-        </div>
-       <div class="faq--form--captcha">
-       </div>
-        
+          <form id="myform">
+            <input class="form-control" type="text" placeholder="Your Name">
+            <input class="form-control" type="text" placeholder="Phone Number">
+            <textarea class="form-control" id="exampleFormControlTextarea1" value="" rows="4" placeholder="Your questions/comments here..."></textarea>
+            <input class="form-control" type="submit" value="Enviar">
+          </form>
       </div>
       <footer class="container">
         <div class="row footer">
@@ -182,5 +100,6 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-</body>
+    <script src="../javascriptcontact.js"></script>
+  </body>
 </html>
