@@ -1,4 +1,4 @@
-// Variables
+
 const listaDeProductos = [
   {
       id: 1,
@@ -46,11 +46,7 @@ const DOMcarrito = document.querySelector('#carrito');
 const DOMtotal = document.querySelector('#total');
 const DOMbotonVaciar = document.querySelector('#boton-vaciar');
 
-// Funciones
 
-/**
-* Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
-*/
 function renderizarProductos() {
   listaDeProductos.forEach((info) => {
       // Estructura
@@ -87,11 +83,9 @@ function renderizarProductos() {
   });
 }
 
-/**
-* Evento para añadir un producto al carrito de la compra
-*/
+
 function anyadirProductoAlCarrito(evento) {
-  // Anyadimos el Nodo a nuestro carrito
+ 
   carrito.push(evento.target.getAttribute('marcador'))
   // Calculo el total
   calcularTotal();
@@ -100,27 +94,19 @@ function anyadirProductoAlCarrito(evento) {
 
 }
 
-/**
-* Dibuja todos los productos guardados en el carrito
-*/
+
 function renderizarCarrito() {
-  // Vaciamos todo el html
   DOMcarrito.textContent = '';
   // Quitamos los duplicados
   const carritoSinDuplicados = [...new Set(carrito)];
   // Generamos los Nodos a partir de carrito
   carritoSinDuplicados.forEach((item) => {
-      // Obtenemos el item que necesitamos de la variable base de datos
       const miItem = listaDeProductos.filter((itemBaseDatos) => {
-          // ¿Coincide las id? Solo puede existir un caso
           return itemBaseDatos.id === parseInt(item);
       });
-      // Cuenta el número de veces que se repite el producto
       const numeroUnidadesItem = carrito.reduce((total, itemId) => {
-          // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
           return itemId === item ? total += 1 : total;
       }, 0);
-      // Creamos el nodo del item del carrito
       const miNodo = document.createElement('li');
       miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
       miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].plato} - ${miItem[0].precio}€`;
@@ -137,53 +123,34 @@ function renderizarCarrito() {
   });
 }
 
-/**
-* Evento para borrar un elemento del carrito
-*/
 function borrarItemCarrito(evento) {
-  // Obtenemos el producto ID que hay en el boton pulsado
   const id = evento.target.dataset.item;
-  // Borramos todos los productos
   carrito = carrito.filter((carritoId) => {
       return carritoId !== id;
   });
-  // volvemos a renderizar
   renderizarCarrito();
-  // Calculamos de nuevo el precio
   calcularTotal();
 }
 
-/**
-* Calcula el precio total teniendo en cuenta los productos repetidos
-*/
+
 function calcularTotal() {
-  // Limpiamos precio anterior
   total = 0 ;
-  // Recorremos el array del carrito
   carrito.forEach((item) => {
-      // De cada elemento obtenemos su precio
       const miItem = listaDeProductos.filter((itemBaseDatos) => {
           return itemBaseDatos.id === parseInt(item);
       });
       total = total + miItem[0].precio;
   });
-  // Renderizamos el precio en el HTML
   DOMtotal.textContent = total.toFixed(2);
 }
 
-/**
-* Varia el carrito y vuelve a dibujarlo
-*/
+
 function vaciarCarrito() {
-  // Limpiamos los productos guardados
   carrito = [];
-  // Renderizamos los cambios
   renderizarCarrito();
   calcularTotal();
 }
 
-// Eventos
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
-// Inicio
 renderizarProductos();
