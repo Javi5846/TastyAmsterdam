@@ -164,7 +164,13 @@ body {
   background: transparent !important; }
 
 .text-right {
-  text-align: center !important; }
+  text-align: center !important;
+  font-weight: bold;
+  font-size: 22px; }
+
+.card-body p {
+  color: whitesmoke !important;
+  font-size: 18px; }
 
 /*FAQ Desktop*/
 .faq--section--h1 {

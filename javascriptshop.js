@@ -158,7 +158,7 @@ function borrarItemCarrito(evento) {
 */
 function calcularTotal() {
   // Limpiamos precio anterior
-  total = 0;
+  total = 0 ;
   // Recorremos el array del carrito
   carrito.forEach((item) => {
       // De cada elemento obtenemos su precio
