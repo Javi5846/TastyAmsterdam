@@ -45,7 +45,7 @@
                         </li>
                         <li class="nav-item">
                           <a href="/Pages/cartsection.html"><img class="logo--carrito--menu" src="../assets/img/cartlogo.png" alt="cart-logo">
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <span id="items--cargados" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                               0
                               <!--<span class="visually-hidden">Items in the Cart</span>-->
                             </span>
@@ -136,7 +136,7 @@
             <!-- Precio total -->
             <p class="text-right">Total: <span id="total"></span>&euro;</p>
             <button id="boton-vaciar" class="btn btn-danger">Delete Items</button>
-            <button id="boton-pay" class="btn btn-danger">Checkout</button>
+            <a href="/Pages/cartsection.html"><button id="boton-pay" class="btn btn-danger">Checkout</button></a>
           </aside>
           <!-- Elementos generados a partir del JSON -->
           <main id="items" class="col-sm-12 row"></main>
@@ -170,6 +170,7 @@
       AOS.init();
     </script>
     <script src="../javascriptshop.js"></script>
+    <script src="../javascriptbadge.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 </html>
