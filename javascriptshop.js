@@ -1,4 +1,6 @@
 
+window.onload = function() {
+  
 const listaDeProductos = [
   {
       id: 1,
@@ -45,7 +47,7 @@ const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
 const DOMtotal = document.querySelector('#total');
 const DOMbotonVaciar = document.querySelector('#boton-vaciar');
-
+const myStorage = localStorage
 
 function renderizarProductos() {
   listaDeProductos.forEach((info) => {
@@ -68,10 +70,12 @@ function renderizarProductos() {
       miNodoPrecio.classList.add('card-text');
       miNodoPrecio.textContent = info.precio + '€';
       // Boton 
+      
       const miNodoBoton = document.createElement('button');
+      const enJSON    = JSON.stringify(listaDeProductos);
       miNodoBoton.classList.add('btn', 'btn-primary');
       miNodoBoton.textContent = 'Add to Cart';
-      miNodoBoton.setAttribute('marcador', info.id);
+      miNodoBoton.setAttribute('id', info.id);
       miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
       // Insertamos
       miNodoCardBody.appendChild(miNodoImagen);
@@ -85,13 +89,12 @@ function renderizarProductos() {
 
 
 function anyadirProductoAlCarrito(evento) {
- 
-  carrito.push(evento.target.getAttribute('marcador'))
+  carrito.push(evento.target.getAttribute('id'))
   // Calculo el total
   calcularTotal();
   // Actualizamos el carrito 
   renderizarCarrito();
-
+  guardarCarritoEnLocalStorage ();
 }
 
 
@@ -130,6 +133,7 @@ function borrarItemCarrito(evento) {
   });
   renderizarCarrito();
   calcularTotal();
+  guardarCarritoEnLocalStorage ();
 }
 
 
@@ -149,8 +153,26 @@ function vaciarCarrito() {
   carrito = [];
   renderizarCarrito();
   calcularTotal();
+  localStorage.clear();
 }
+
+function guardarCarritoEnLocalStorage () {
+  myStorage.setItem('Plato', (carrito));
+}
+function cargarCarritoDeLocalStorage () {
+  // ¿Existe un carrito previo guardado en LocalStorage?
+  if (myStorage.getItem('Plato') !== null) {
+      // Carga la información
+      carrito = JSON.parse(myStorage.getItem('Plato'));
+  }
+}
+
 
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
+cargarCarritoDeLocalStorage();
 renderizarProductos();
+calcularTotal();
+renderizarCarrito();
+
+};

@@ -81,6 +81,12 @@ body {
 .navbar-light .navbar-nav .nav-link:hover {
   color: whitesmoke; }
 
+.bg-danger {
+  background-color: #ff0095 !important; }
+
+.badge {
+  margin-top: 12px !important; }
+
 /*Menu Desktop*/
 .welcome--menu {
   margin-top: 30px;

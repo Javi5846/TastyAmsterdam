@@ -90,7 +90,12 @@ $fuentes: (
 .navbar-light .navbar-nav .nav-link:hover {
     color: whitesmoke;
 }
-
+.bg-danger {
+    background-color: rgb(255, 0, 149)!important;
+}
+.badge {
+    margin-top: 12px!important;
+}
 /*Menu Desktop*/
 .welcome--menu {
     margin-top: 30px;
