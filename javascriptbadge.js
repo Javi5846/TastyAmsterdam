@@ -5,5 +5,3 @@ let carritoShop = JSON.parse(miLocalStorage.getItem('carrito'));
 $("#items--cargados").html(carritoShop.length);
 }
 pruebaCarrito();
-
-

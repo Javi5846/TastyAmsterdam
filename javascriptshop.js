@@ -86,7 +86,7 @@ window.onload = function() {
         DOMitems.appendChild(miNodo);
     });
   }
-  
+  $("aside").hide();
   let a = 0
   function anyadirProductoAlCarrito(evento) {
     carrito.push(evento.target.getAttribute('id'))
