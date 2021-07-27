@@ -262,7 +262,68 @@ margin-left: 80px;
     margin-top: 22px;
     margin-left: 25px;
   }
-
+#account--details--h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#email {
+    width: 200px;
+    margin-left: 20px;
+    color: rgb(141, 140, 140);
+}
+#docNumber {
+    width: 200px;
+    margin-left: 52px;
+    color: rgb(141, 140, 140);
+}
+#card--details--h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#cardNumber {
+    width: 200px;
+    margin-left: 52px;
+    color: rgb(141, 140, 140);
+}
+#securityCode {
+    width: 200px;
+    margin-left: 52px;
+    color: rgb(141, 140, 140);
+}
+#cardholderName{
+    width: 200px;
+    margin-left: 10px;
+    color: rgb(141, 140, 140);
+}
+#cardNumber {
+    margin-left: 20px;
+}
+#card--number {
+    margin-top: 20px;
+}
+#securityCode {
+    width: 60px;
+}
+#cardExpirationMonth {
+    width: 60px;
+}
+#cardExpirationYear {
+    width: 60px;
+}
+#complete--order {
+    width: 160px;
+    margin-left: 20px;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: .25rem;
+}
+#back--to--cart {
+    width: 160px;
+    margin-right: 20px;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: .25rem;
+}
 /* COMPACT CAPTCHA */
 
 .capbox {

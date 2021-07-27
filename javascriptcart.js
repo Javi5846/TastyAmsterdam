@@ -17,8 +17,11 @@ $('#div--cart--section').prepend(`<div class="container">
 </div>`);
 $('aside').css("margin-left","200px");
 
-window.onload = function() {
-  
+
+
+window.onload = function() {  
+
+ 
     const listaDeProductos = [
       {
           id: 1,
@@ -187,5 +190,17 @@ window.onload = function() {
     renderizarProductos();
     calcularTotal();
     renderizarCarrito();
-    
-    };
+}; 
+
+$("#boton-pay").click((event) => { 
+  event.preventDefault();
+  $('#div--cart--section').fadeOut('fast');
+  $('#pagos--tarjetas').fadeIn(3000);
+});
+$('#back--to--cart').click((event) => {
+  event.preventDefault();
+  $('#pagos--tarjetas').fadeOut('fast');
+  $('#div--cart--section').fadeIn(2000)
+                          .delay(3000);
+}); 
+$('#pagos--tarjetas').css("margin-left","400px");

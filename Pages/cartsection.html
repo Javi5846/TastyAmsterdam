@@ -66,10 +66,65 @@
           </div>
     </div>
 <div id="div--cart--section">
-<div>
-
 </div>
-
+<div style="display:none" id="pagos--tarjetas">
+  <form action="/process_payment" method="post" id="paymentForm">
+    <h3 id="account--details--h3">Account</h3>
+      <div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input id="email" name="email" type="text" value="test@test.com"/>
+        </div>
+        <div>
+          <label for="docNumber">ID:</label>
+          <input id="docNumber" name="docNumber" data-checkout="docNumber" type="text" value="Your ID"/>
+        </div>
+      </div>
+    <h3 id="card--details--h3">Card Details</h3>
+      <div>
+        <div>
+          <label for="cardholderName">Cardholder Name</label>
+          <input id="cardholderName" data-checkout="cardholderName" type="text" value="Name and Surname">
+        </div>
+        <div>
+          <div>
+            <label for="">Valid Thru</label>
+            <input type="text" placeholder="MM" id="cardExpirationMonth" data-checkout="cardExpirationMonth"
+              onselectstart="return false" onpaste="return false"
+              oncopy="return false" oncut="return false"
+              ondrag="return false" ondrop="return false" autocomplete=off>
+            <span class="date-separator">/</span>
+            <input type="text" placeholder="YY" id="cardExpirationYear" data-checkout="cardExpirationYear"
+              onselectstart="return false" onpaste="return false"
+              oncopy="return false" oncut="return false"
+              ondrag="return false" ondrop="return false" autocomplete=off>
+          </div>
+        </div>
+        <div id="card--number">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" id="cardNumber" data-checkout="cardNumber" value="1234-XXXX-XXXX-XXXX"
+            onselectstart="return false" onpaste="return false"
+            oncopy="return false" oncut="return false"
+            ondrag="return false" ondrop="return false" autocomplete=off>
+        </div>
+        <div id="CVC">
+          <label for="securityCode">CVC</label>
+          <input id="securityCode" data-checkout="securityCode" type="text" value="XXX"
+            onselectstart="return false" onpaste="return false"
+            oncopy="return false" oncut="return false"
+            ondrag="return false" ondrop="return false" autocomplete=off>
+        </div>
+        <div>
+          <input type="hidden" name="transactionAmount" id="transactionAmount" value="100" />
+          <input type="hidden" name="paymentMethodId" id="paymentMethodId" />
+          <input type="hidden" name="description" id="description" />
+          <br>
+          <button id="back--to--cart" type="submit">Back to Cart</button>
+          <button id="complete--order" type="submit">Complete Order</button>
+          <br>
+        </div>
+    </div>
+    </form>
 </div>
     <footer class="container">
         <div class="row footer">

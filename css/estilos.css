@@ -244,6 +244,68 @@ body {
   margin-top: 22px;
   margin-left: 25px; }
 
+#account--details--h3 {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+#email {
+  width: 200px;
+  margin-left: 20px;
+  color: #8d8c8c; }
+
+#docNumber {
+  width: 200px;
+  margin-left: 52px;
+  color: #8d8c8c; }
+
+#card--details--h3 {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+#cardNumber {
+  width: 200px;
+  margin-left: 52px;
+  color: #8d8c8c; }
+
+#securityCode {
+  width: 200px;
+  margin-left: 52px;
+  color: #8d8c8c; }
+
+#cardholderName {
+  width: 200px;
+  margin-left: 10px;
+  color: #8d8c8c; }
+
+#cardNumber {
+  margin-left: 20px; }
+
+#card--number {
+  margin-top: 20px; }
+
+#securityCode {
+  width: 60px; }
+
+#cardExpirationMonth {
+  width: 60px; }
+
+#cardExpirationYear {
+  width: 60px; }
+
+#complete--order {
+  width: 160px;
+  margin-left: 20px;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: .25rem; }
+
+#back--to--cart {
+  width: 160px;
+  margin-right: 20px;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: .25rem; }
+
 /* COMPACT CAPTCHA */
 .capbox {
   background-color: #BBBBBB;
