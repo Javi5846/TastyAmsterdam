@@ -257,6 +257,7 @@ margin-bottom: 50px;
 margin-left: 80px;
 }
 /*Cart Section Desktop*/
+
 .logo--carrito--menu {
     width: 30px;
     margin-top: 22px;
@@ -951,8 +952,23 @@ input#securitycode {
     padding-left: 15px;
     padding-right: 15px;
 }
-}
 
+/*Cart Section Mobile*/
+aside {
+    margin-left: 0px!important;
+}
+#pagos--tarjetas {
+    margin-left: 50px!important;
+    max-width: 280px!important;
+}
+#back--to--cart {
+    margin-top: 50px!important;
+    margin-left: 20px;
+}
+#complete--order {
+    margin-left: 0px!important;
+}
+}
 @media only screen and (min-width:768px) and (max-width:1023px) {
     .col-md-11 .navbar-brand {
         color: whitesmoke;
