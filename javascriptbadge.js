@@ -1,7 +1,7 @@
 
 function pruebaCarrito() {
 const miLocalStorage = window.localStorage;
-let carritoShop = JSON.parse(miLocalStorage.getItem('carrito'));
-$("#items--cargados").html(carritoShop.length);
+let carrito = JSON.parse(miLocalStorage.getItem('carrito'));
+$("#items--cargados").html(carrito.length);
 }
 pruebaCarrito();

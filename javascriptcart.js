@@ -193,10 +193,19 @@ window.onload = function() {
 
 // ------------------------------------------------Animaciones en el carrito------------------------------------------------------------ 
 $("#boton-pay").click((event) => { 
-  event.preventDefault();
+    event.preventDefault();
+    if (carrito.length == 0) {
+    Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Something went wrong!',
+    footer: '<a href="">Please add something to the cart before complete.</a>'
+    })}
+    else if (carrito.length != 0) {
   $('#div--cart--section').fadeOut('fast');
   $('#pagos--tarjetas').fadeIn(3000);
-});
+}
+})
 $('#back--to--cart').click((event) => {
   event.preventDefault();
   $('#pagos--tarjetas').fadeOut('fast');
@@ -206,7 +215,7 @@ $('#back--to--cart').click((event) => {
 $('#pagos--tarjetas').css("margin-left","350px");
 
 $("#complete--order").click((event) =>  {
-  event.preventDefault();
+    event.preventDefault();
   Swal.fire(
   'Thanks for your order!',
   '',

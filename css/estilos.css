@@ -114,6 +114,15 @@ body {
 .contact--details-number {
   font-size: 30px; }
 
+#exampleFormControlTextarea1 {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.form-control-contact {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
 /*About Us Desktop*/
 .aboutus--title {
   margin-top: 50px;
@@ -236,7 +245,19 @@ body {
   margin-bottom: 50px; }
 
 .faq--captcha--send--button {
-  margin-left: 80px; }
+  margin-left: 80px;
+  height: 50px; }
+
+.form-control {
+  width: 200px;
+  align-self: center; }
+
+.form-control2 {
+  width: 100%; }
+
+.text-muted {
+  color: whitesmoke !important;
+  font-weight: bold; }
 
 /*Cart Section Desktop*/
 .logo--carrito--menu {
