@@ -214,17 +214,6 @@ $('#back--to--cart').click((event) => {
 }); 
 $('#pagos--tarjetas').css("margin-left","350px");
 
-$("#complete--order").click((event) =>  {
-    event.preventDefault();
-  Swal.fire(
-  'Thanks for your order!',
-  '',
-  'success')
-  vaciarCarrito()
-  localStorage.clear();
-  $('#pagos--tarjetas').fadeOut('fast');
-});
-
 //-----------------------------------------------------------Pago con tarjeta----------------------------------------------------------
 
 const name = document.getElementById('name');
@@ -235,7 +224,6 @@ const output = document.getElementById('output');
 const ccicon = document.getElementById('ccicon');
 const ccsingle = document.getElementById('ccsingle');
 const generatecard = document.getElementById('generatecard');
-
 
 let cctype = null;
 
@@ -505,4 +493,29 @@ securitycode.addEventListener('focus', function () {
     document.querySelector('.creditcard').classList.add('flipped');
 });
 
-}; 
+
+
+//---------------------------------------Boton completar pago-----------------------------
+
+$("#complete--order").click((event) =>  {
+    if ((cardnumber.value.length < 19 || cardnumber.value.length > 19) || (expirationdate.value.length > 5 || expirationdate.value.length  <= 4) || (securitycode.value.length <3 || securitycode.value.length > 3) || (name.value.length <4  || name.value.length >30)) {
+        event.preventDefault();
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: '<a href="">Card info is not correct and/or incomplete, check and try again.</a>'
+            })
+    }
+    else if ((securitycode.value.length == 3) && (expirationdate.value.length == 5) && (cardnumber.value.length == 19) && (name.value.length > 4)) {
+    event.preventDefault();
+    Swal.fire(
+    'Thanks for your order!',
+    '',
+    'success')
+    vaciarCarrito()
+    localStorage.clear();
+    $('#pagos--tarjetas').fadeOut('fast')
+};
+});
+}
