@@ -40,7 +40,7 @@ window.onload = function() {
     }
   
   ];
-  
+
   let carrito = [];
   let total = 0;
   const DOMitems = document.querySelector('#items');
@@ -86,79 +86,17 @@ window.onload = function() {
         DOMitems.appendChild(miNodo);
     });
   }
-  $("aside").hide();
+  
   let a = 0
   function anyadirProductoAlCarrito(evento) {
     carrito.push(evento.target.getAttribute('id'))
     $("#items--cargados").html(carrito.length);
-    // Calculo el total
-    calcularTotal();
     // Actualizamos el carrito 
-    renderizarCarrito();
     guardarCarritoEnLocalStorage ();
   }
   
   
-  function renderizarCarrito() {
-    DOMcarrito.textContent = '';
-    // Quitamos los duplicados
-    const carritoSinDuplicados = [...new Set(carrito)];
-    // Generamos los Nodos a partir de carrito
-    carritoSinDuplicados.forEach((item) => {
-        const miItem = listaDeProductos.filter((itemBaseDatos) => {
-            return itemBaseDatos.id === parseInt(item);
-        });
-        const numeroUnidadesItem = carrito.reduce((total, itemId) => {
-            return itemId === item ? total += 1 : total;
-        }, 0);
-        const miNodo = document.createElement('li');
-        miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].plato} - ${miItem[0].precio}€`;
-        // Boton de borrar
-        const miBoton = document.createElement('button');
-        miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-        miBoton.textContent = 'X';
-        miBoton.style.marginLeft = '1rem';
-        miBoton.dataset.item = item;
-        miBoton.addEventListener('click', borrarItemCarrito);
-        // Mezclamos nodos
-        miNodo.appendChild(miBoton);
-        DOMcarrito.appendChild(miNodo);
-    });
-  }
   
-  function borrarItemCarrito(evento) {
-    const id = evento.target.dataset.item;
-    carrito = carrito.filter((carritoId) => {
-        return carritoId !== id;
-    });
-    $("#items--cargados").html(carrito.length);
-    renderizarCarrito();
-    calcularTotal();
-    guardarCarritoEnLocalStorage ();
-  }
-  
-  
-  function calcularTotal() {
-    total = 0 ;
-    carrito.forEach((item) => {
-        const miItem = listaDeProductos.filter((itemBaseDatos) => {
-            return itemBaseDatos.id === parseInt(item);
-        });
-        total = total + miItem[0].precio;
-    });
-    DOMtotal.textContent = total.toFixed(2);
-  }
-  
-  
-  function vaciarCarrito() {
-    carrito = [];
-    a = 0
-    $("#items--cargados").html(a);
-    renderizarCarrito();
-    calcularTotal();
-    localStorage.clear();
-  }
   
   function guardarCarritoEnLocalStorage () {
     miLocalStorage.setItem('carrito', JSON.stringify(carrito));
@@ -171,11 +109,8 @@ function cargarCarritoDeLocalStorage () {
 }
   
   
-  DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+ // DOMbotonVaciar.addEventListener('click', vaciarCarrito);
   
   cargarCarritoDeLocalStorage();
   renderizarProductos();
-  calcularTotal();
-  renderizarCarrito();
-  
   };

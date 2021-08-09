@@ -1,23 +1,4 @@
 
-$('#div--cart--section').prepend(`<div class="container">
-<div class="row">
-    <aside class="col-sm-12">
-      <h2>Cart</h2>
-      <!-- Elementos del carrito -->
-      <ul id="carrito" class="list-group"></ul>
-      <hr>
-      <!-- Precio total -->
-      <p class="text-right">Total: <span id="total"></span>&euro;</p>
-      <button id="boton-vaciar" class="btn btn-danger">Delete Items</button>
-      <a href="/Pages/cartsection.html"><button id="boton-pay" class="btn btn-danger">Checkout</button></a>
-    </aside>
-    <!-- Elementos generados a partir del JSON -->
-    <main id="items" class="col-sm-12 row"></main>
-</div>
-</div>`);
-$('aside').css("margin-left","200px");
-
-
 
 window.onload = function() {  
 
@@ -70,48 +51,15 @@ window.onload = function() {
     const DOMbotonVaciar = document.querySelector('#boton-vaciar');
     const miLocalStorage = window.localStorage;
     
-    function renderizarProductos() {
-      listaDeProductos.forEach((info) => {
-          // Estructura
-          const miNodo = document.createElement('div');
-          miNodo.classList.add('card', 'col-sm-4');
-          // Body
-          const miNodoCardBody = document.createElement('div');
-          miNodoCardBody.classList.add('card-body');
-          // Titulo
-          const miNodoTitle = document.createElement('h5');
-          miNodoTitle.classList.add('card-title');
-          miNodoTitle.textContent = info.plato;
-          // Imagen
-          const miNodoImagen = document.createElement('img');
-          miNodoImagen.classList.add('img-fluid');
-          miNodoImagen.setAttribute('src', info.imagen);
-          // Precio
-          const miNodoPrecio = document.createElement('p');
-          miNodoPrecio.classList.add('card-text');
-          miNodoPrecio.textContent = info.precio + '€';
-          // Boton 
-          const miNodoBoton = document.createElement('button');
-          const enJSON    = JSON.stringify(listaDeProductos);
-          miNodoBoton.classList.add('btn', 'btn-primary');
-          miNodoBoton.textContent = 'Add to Cart';
-          miNodoBoton.setAttribute('id', info.id);
-          miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-      });
-    }
-    
     let a = 0
-    function anyadirProductoAlCarrito(evento) {
-      carrito.push(evento.target.getAttribute('id'))
-      $("#items--cargados").html(carrito.length);
-      // Calculo el total
-      calcularTotal();
-      // Actualizamos el carrito 
-      renderizarCarrito();
-      guardarCarritoEnLocalStorage ();
+
+    function habilitarBoton() {
+        if ((carrito.length >= 1) && (carrito.length != 0)){
+        $("#boton-vaciar").prop('disabled',false);}
+        else {
+            $("#boton-vaciar").prop('disabled',true);}
     }
-    
-    
+        
     function renderizarCarrito() {
       DOMcarrito.textContent = '';
       // Quitamos los duplicados
@@ -138,6 +86,7 @@ window.onload = function() {
           miNodo.appendChild(miBoton);
           DOMcarrito.appendChild(miNodo);
       });
+      habilitarBoton();
     }
     
     function borrarItemCarrito(evento) {
@@ -149,6 +98,7 @@ window.onload = function() {
       renderizarCarrito();
       calcularTotal();
       guardarCarritoEnLocalStorage ();
+      habilitarBoton()
     }
     
     
@@ -160,6 +110,7 @@ window.onload = function() {
           });
           total = total + miItem[0].precio;
       });
+      habilitarBoton()
       DOMtotal.textContent = total.toFixed(2);
     }
     
@@ -171,6 +122,7 @@ window.onload = function() {
       renderizarCarrito();
       calcularTotal();
       localStorage.clear();
+      habilitarBoton()
     }
     
     function guardarCarritoEnLocalStorage () {
@@ -187,10 +139,9 @@ window.onload = function() {
     DOMbotonVaciar.addEventListener('click', vaciarCarrito);
     
     cargarCarritoDeLocalStorage();
-    renderizarProductos();
-    calcularTotal();
     renderizarCarrito();
-
+    calcularTotal();
+    habilitarBoton()
 // ------------------------------------------------Animaciones en el carrito------------------------------------------------------------ 
 $("#boton-pay").click((event) => { 
     event.preventDefault();
@@ -416,9 +367,9 @@ const randomCard = function () {
     let testCards = [
         '4000056655665556',
         '5200828282828210',
-        '371449635398431',
+        '3714496353984312',
         '6011000990139424',
-        '30569309025904',
+        '3056930902590423',
         '3566002020360505',
         '6200000000000005',
         '6759649826438453',

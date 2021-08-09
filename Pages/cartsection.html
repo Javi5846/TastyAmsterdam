@@ -46,7 +46,7 @@
                         <li class="nav-item">
                           <a href="../Pages/cartsection.html"><img class="logo--carrito--menu" src="../assets/img/cartlogo.png" alt="cart-logo">
                             <span id="items--cargados" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                              0
+                              
                               <!--<span class="visually-hidden">Items in the Cart</span>-->
                             </span>
                           </a>
@@ -65,7 +65,17 @@
               </div>
           </div>
     </div>
-<div id="div--cart--section">
+<div id="div--cart--section" class="col-lg-12">
+    <aside class="col-sm-12">
+        <h2>Cart</h2>
+        <!-- Elementos del carrito -->
+        <ul id="carrito" class="list-group"></ul>
+        <hr>
+        <!-- Precio total -->
+        <p class="text-right">Total: <span id="total"></span>&euro;</p>
+        <button id="boton-vaciar" class="btn btn-danger" disabled="true">Delete Items</button>
+        <button id="boton-pay" class="btn btn-danger">Checkout</button>
+      </aside>
 </div>
 <div style="display:none" id="pagos--tarjetas">
   <div class="payment-title">
